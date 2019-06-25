@@ -6,15 +6,27 @@
 }
 
 .highcharts-background {
-  fill: #222;
+  fill: var(--chart-bg);
 }
 
 .highcharts-title,
 .highcharts-axis-title {
-  fill: #DDD;
+  fill: var(--chart-axis);
 }
 
 .highcharts-credits,
 .highcharts-credits:hover {
   display: none;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #222;
+    min-height: 400px;
+    height:95%;
+    width:95%;
+    position:absolute;
+
 }
