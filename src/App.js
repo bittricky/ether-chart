@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactHighCharts from 'react-highcharts';
+import numeral from 'numeral';
+import dateFns from 'date-fns';
 
 import './App.css';
 
@@ -12,11 +14,31 @@ const config = {
 
   },
   xAxis: {
-    type: 'datetime'
+    type: 'datetime',
+    labels: {
+      formatter: function() {
+        return dateFns.format(this.value, 'hh:mm:ss a');
+      }
+    }
+
   },
   yAxis: {
     title: {
       text: 'Price (USD)'
+    },
+    labels: {
+      formatter: function() {
+        return numeral(this.value).format('$0,0.00');
+      }
+    }
+  },
+  plotOptions: {
+    spline: {
+        marker: {
+            radius: 4,
+            lineColor: '#666666',
+            lineWidth: 1
+        }
     }
   },
   legend: {
