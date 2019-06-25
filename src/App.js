@@ -11,12 +11,11 @@ const config = {
   },
   title: {
     text: '',
-
   },
   xAxis: {
     type: 'datetime',
     labels: {
-      formatter: function() {
+      formatter: function () {
         return dateFns.format(this.value, 'hh:mm:ss a');
       }
     }
@@ -27,7 +26,7 @@ const config = {
       text: 'Price (USD)'
     },
     labels: {
-      formatter: function() {
+      formatter: function () {
         return numeral(this.value).format('$0,0.00');
       }
     }
@@ -40,6 +39,12 @@ const config = {
             lineWidth: 1
         }
     }
+  },
+  tooltip: {
+    formatter: function () {
+            return 'It is <b>' +  numeral(this.y).format('$0,0.00') +
+                '</b> at <b>' + dateFns.format(this.x, 'hh:mm:ss a') + '</b>';
+        }
   },
   legend: {
     enabled: false
