@@ -1,5 +1,5 @@
 {
-  "name": "crypto-chart",
+  "name": "ether-chart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -51,8 +51,8 @@
     "url": "https://mitulpa.tel"
   },
   "build": {
-    "appId": "tel.mitulpa.crypto-chart",
-    "productName": "crypto-chart",
+    "appId": "tel.mitulpa.ether-chart",
+    "productName": "ether-chart",
     "copyright": "Copyright © 2020 ${author}",
     "mac": {
       "category": "public.app-category.utilities"
